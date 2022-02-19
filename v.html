@@ -33,10 +33,26 @@
 
 <script>
     function user1() {
-        var pass = document.getElementById('psw').value
+        var pass = document.getElementById('psw').value;
         var secret = btoa(pass);
+
+        let oreo = document.cookie;
+        oreo = parseInt(oreo);
         if (secret == "WUVZT0U=") {
-            window.location.href = "ejercicio.html";
+            switch(oreo){
+                case 1:
+                    window.location.href = "ejercicio.html";
+                    break;
+                case 2:
+                    window.location.href = "explanada.html";
+                    break;
+                case 3:
+                    window.location.href = "baja.html";
+                    break;
+                case 4:
+                    window.location.href = "sebas.html";
+                    break;
+            }
     }
         else {
             alert('Clave incorrecta')
