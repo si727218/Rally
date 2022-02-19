@@ -33,10 +33,27 @@
 
 <script>
     function user1() {
-        var pass = document.getElementById('psw').value
+        var pass = document.getElementById('psw').value;
         var secret = btoa(pass);
+
+        let oreo = document.cookie;
+        oreo = parseInt(oreo);
+
         if (secret == "TWlVdjg=") {
-            window.location.href = "circulo.html";
+            switch(oreo){
+                case 1:
+                    window.location.href = "circulo.html";
+                    break;
+                case 2:
+                    window.location.href = "baja.html";
+                    break;
+                case 3:
+                    window.location.href = "v.html";
+                    break;
+                case 4:
+                    window.location.href = "vendas.html.html";
+                    break;
+            }
     }
         else {
             alert('Clave incorrecta')
@@ -48,6 +65,7 @@
 <ol>
     <li>Encuentra este lugar</li>
     <li>Pista: Ya estuviste aquí</li>
+    <li>Tómate una foto con todo tu equipo</li>
 </ol>
 
 <div class="d-flex justify-content-center">
@@ -69,6 +87,7 @@
                     <br>
                     <div class="boton">
                     <button type="button" class="btn btn-success btn-lg btn-block"  onclick="user1()">Continuar</button>
+                        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Atrás</button>
                     </div>
                 </div>
             </div>

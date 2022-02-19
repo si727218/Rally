@@ -14,7 +14,22 @@
 
 <script>
     function next1() {
-        window.location.href = "explanada.html";
+        let oreo = document.cookie;
+        oreo = parseInt(oreo);
+        switch(oreo){
+            case 1:
+                window.location.href = "explanada.html";
+                break;
+            case 2:
+                window.location.href = "v.html";
+                break;
+            case 3:
+                window.location.href = "50.html";
+                break;
+            case 4:
+                window.location.href = "m.html";
+                break;
+        }
     }
 </script>
 
@@ -38,5 +53,6 @@
     </ol>
 
     <button type="button" class="btn btn-primary btn-lg btn-block"  onclick="next1()">Continuar</button>
+    <button type="button" class="btn btn-danger btn-lg btn-block" onclick="history.back()">Atrás</button>
 </div>
 </html>

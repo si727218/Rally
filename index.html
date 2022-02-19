@@ -34,6 +34,10 @@
 <script>
     function next() {
         window.location.href = "foto_equipo.html";
+        let ruta = Math.floor(Math.random() * (5 - 1)) + 1
+        //let rutas = num.toString();
+        document.cookie = ruta;
+        console.log(document.cookie);
     }
 </script>
 
@@ -46,7 +50,8 @@
     <ul>
         <li>Seguir todas las medidas de protección</li>
         <li>Evitar aglomeraciones</li>
-        <li>Tomarte fotografías con tu equipo en <b>TODOS</b> los stands</li>
+        <li>Tómate fotografías con tu equipo en <b>TODOS</b> los stands</li>
+        <li>Anota todas las claves para que no tengas que iniciar de 0 en caso de un error</li>
         <li>¡Divertirte mucho!</li>
     </ul>
     <p class="lead">
